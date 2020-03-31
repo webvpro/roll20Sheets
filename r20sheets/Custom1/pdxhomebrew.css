@@ -1,0 +1,133 @@
+.sheet-main {
+    display: grid;
+    width: 100%;
+    max-width: 99.9em;
+    min-width: 82.5em;
+    height: 90.0em;
+    grid-gap: 0;
+    grid-template-columns: 10.3em 1fr 1fr 1fr;
+    grid-template-rows: 90px 1fr 1fr 1fr 20px;
+    grid-template-areas:"header  header  header  header"
+                        "skill   common  common  power"
+                        "skill   attack  inv     power"
+                        "skill   misc    inv     power"
+                        "footer  footer  footer  footer";
+  }
+  /* As hex codes */
+
+.color-primary-0 { color: #2F4073 }	/* Main Primary color */
+.color-primary-1 { color: #3960D7 }
+.color-primary-2 { color: #35509E }
+.color-primary-3 { color: #222C47 }
+.color-primary-4 { color: #0F131C }
+
+.sheet-primary-1 { 
+    color: #3960D7;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #0F131C 0%, #2F4073 74%); 
+}
+.sheet-primary-2 { background-color: #35509E }
+.sheet-primary-0 { background-color: #2F4073 }
+.sheet-primary-3 { background-color: #222C47 }
+.sheet-primary-4 { background-color: #0F131C }
+
+/* As RGBa codes */
+
+.rgba-primary-0 { color: rgba( 47, 64,115,1) }	/* Main Primary color */
+.rgba-primary-1 { color: rgba( 57, 96,215,1) }
+.rgba-primary-2 { color: rgba( 53, 80,158,1) }
+.rgba-primary-3 { color: rgba( 34, 44, 71,1) }
+.rgba-primary-4 { color: rgba( 15, 19, 28,1) }
+  /*----------------- GENERAL CSS ------------------*/
+  
+  textarea {
+    width: 90%;
+    height: 85%;
+  }
+  label {
+      color: #35509E;
+      padding: 0.033em
+  }
+  .sheet-section {
+      padding: 0.233em;
+      border-style: solid;
+      border-width: 0.033em ;
+  }
+  
+  .sheet-flex-col {
+    display: flex;
+    flex-flow: row wrap;
+    /*justify-content: flex-start;*/
+  }
+  
+  .sheet-flex-center {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*------------- Section-specific CSS -------------*/
+  
+  .sheet-header {
+    grid-area: header;
+    flex-direction: column;
+  }
+  
+  .sheet-skill {
+    grid-area: skill;
+  }
+  
+  .sheet-common {
+    grid-area: common;
+}
+  
+  .sheet-power {
+    grid-area: power;
+    flex-flow: column;
+    align-content: flex-start;
+  }
+  input[type="text"] {
+      background-color: #222C47;
+      color: #3960D7;
+      border:none;
+      z-index: -1;
+  }
+  input[type="text"]:focus {
+    background-color: #3960D7;
+    color: #222C47;
+    border: solid;
+    border-color: #0F131C;
+
+}
+  input[name="attr_power"] {
+      width : 100%
+  }
+  .repcontainer {
+      display: flex;
+      flex-direction: column;
+  }
+  .repcontainer .repitem {
+    padding-bottom: 0.2em;
+  }
+  .repcontainer.ui-sortable .repitem {
+      background-color: rgba( 53, 80,158,0.5) !important;
+  }
+
+  .repcontainer .repitem {
+    padding-bottom: 0.2em;
+  }
+  .sheet-attack {
+    grid-area: attack;
+  }
+  
+  .sheet-inv {
+    grid-area: inv;
+  }
+  
+  .sheet-misc {
+    grid-area: misc;
+  }
+  
+  .sheet-footer {
+    grid-area: footer;
+    background-color: gray;
+  }
